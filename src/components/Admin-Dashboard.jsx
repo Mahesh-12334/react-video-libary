@@ -1,11 +1,14 @@
 
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { useCookies } from "react-cookie";
 
 export  function AdminDashBoard(){
   
+  let navigate = useNavigate();
  const[videos,setVideos] = useState([{VideoId:0,Title:'',Description:'',Url:'',Likes:0,DisLikes:0,Views:0,categoryId:0}]);
+ const[cookie,setCookie,removeCookie] = useCookies("Admin-id");
 
   function LoadVideos(){
     axios.get('http://localhost:2500/get-videos')
@@ -15,7 +18,11 @@ export  function AdminDashBoard(){
   }
 
   useEffect(()=>{
+   if(cookie['Admin-id']){
     LoadVideos();
+   }else{
+   navigate('/Admin-login');
+   }
   },[])
 
   function handleDeleteClick(id){
