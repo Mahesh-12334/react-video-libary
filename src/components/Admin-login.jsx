@@ -31,7 +31,7 @@ export function AdminLogin(){
         }
     })
     return(
-        <div className="d-flex justify-content-center align-items-center" style={{height:'100vh'}}>
+        <div className="d-flex justify-content-center align-items-center" style={{height:'600px'}}>
           <form onSubmit={formik.handleSubmit}>
             <h4 className="text-center text-black">Admin-Login</h4>
             <dl>
