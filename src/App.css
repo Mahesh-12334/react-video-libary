@@ -1,0 +1,14 @@
+header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px;
+}
+.fragment{
+  background-image: url('../public/images/sun-rise.jpg');
+  background-size: cover;
+  color: white;
+  height: 100vh;
+}
+
+
