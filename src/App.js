@@ -42,6 +42,7 @@ function App() {
           <Route path='user-dashboard' element={<UserDashboard/>}></Route>
           <Route path='user-error' element={<UserError/>}></Route>
           <Route path='/' element={<Home></Home>}></Route>
+          <Route path='https://mahesh-12334.github.io/react-video-libary/' element={<Home/>}></Route>
           <Route path='*' element={<h1 style={{height:'100vh'}} className='text-center text-warning'> 404 Error - we can't find any page on this path</h1>}></Route>
     </Routes>
     </section>
